@@ -1,0 +1,83 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "QzoneHotPatch",
+    "module": "hotplugin",
+    "version": "unspecified",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "hotplugin-unspecified.jar",
+          "url": "hotplugin-unspecified.jar",
+          "size": 22641,
+          "sha512": "163830192195f0130fc9847b86b36d2b71fd2f7a9a0c0c29ef58446bb143230855e0e493dffba4cd2965ac69e90c477b214e6166947aeb91a2f954e6c194c521",
+          "sha256": "76a1e52c7924fa5ecd64e17a2c519dfa59496a3af57bf426681cdb4e7fa6487a",
+          "sha1": "1de9c579c45cdcde10869c505c79f8e9938f8f86",
+          "md5": "9cd0cc6e927ff80252a683ac9737eedd"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "4.1.1"
+          }
+        },
+        {
+          "group": "org.javassist",
+          "module": "javassist",
+          "version": {
+            "requires": "3.20.0-GA"
+          }
+        },
+        {
+          "group": "commons-io",
+          "module": "commons-io",
+          "version": {
+            "requires": "2.6"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hotplugin-unspecified.jar",
+          "url": "hotplugin-unspecified.jar",
+          "size": 22641,
+          "sha512": "163830192195f0130fc9847b86b36d2b71fd2f7a9a0c0c29ef58446bb143230855e0e493dffba4cd2965ac69e90c477b214e6166947aeb91a2f954e6c194c521",
+          "sha256": "76a1e52c7924fa5ecd64e17a2c519dfa59496a3af57bf426681cdb4e7fa6487a",
+          "sha1": "1de9c579c45cdcde10869c505c79f8e9938f8f86",
+          "md5": "9cd0cc6e927ff80252a683ac9737eedd"
+        }
+      ]
+    }
+  ]
+}

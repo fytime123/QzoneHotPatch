@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.hot.plugin'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId "com.hotpatch.demo"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+//  jumboMode true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+//    applicationVariants.all { variant->
+//        def dexTask = project.tasks.findByName("transformClassesWithDexForDebug")
+//        def preDexTask = project.tasks.findByName("transformClassesWithPreDexForDebug")
+//        if(preDexTask) {
+//            project.logger.error "======preDexTask======"
+//            preDexTask.inputs.files.files.each {file ->
+//                project.logger.error "inputs =$file.absolutePath"
+//            }
+//
+//            preDexTask.outputs.files.files.each {file ->
+//                project.logger.error "outputs =$file.absolutePath"
+//            }
+//        }
+//        if(dexTask) {
+//            project.logger.error "======dexTask======"
+//            dexTask.inputs.files.files.each {file ->
+//                project.logger.error "inputs =$file.absolutePath"
+//            }
+//
+//            dexTask.outputs.files.files.each {file ->
+//                project.logger.error "outputs =$file.absolutePath"
+//            }
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.13'
+    implementation project(':hotpatch')
+
+
+}
